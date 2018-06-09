@@ -1,0 +1,390 @@
+/* -------------------------------------------------------- HTML Page -------------------------------------------------------- */
+*{
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Courier New","Lato", sans-serif;
+    font-weight: 400;
+    line-height:1.5;
+    color: #666;
+}
+body{
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+/* -------------------------------------------------------- Navigation -------------------------------------------------------- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px 100px;
+    box-sizing: border-box;
+    z-index: 4;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav.black{
+    background: #212121;
+    height: 70px;
+    padding: 5px 100px;
+}
+nav .logo{
+    padding: 11px 20px;
+    height: 70px;
+    float: left;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+nav .logo span {
+padding-top: 30px;
+padding-bottom: 30px;
+}
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    line-height: 60px;
+    padding: 6px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: bold;
+}
+nav ul li a:focus{
+    outline: none;
+}
+/*-------------------------------------------------------- Home --------------------------------------------------------*/
+.header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.container{
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+.header-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.header-video video{
+    min-width: 100%;
+    min-height: 100%;
+}
+.header-overlay{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1B1B1B;
+    z-index:1;
+    opacity: 0.80;
+}
+.header-content{
+    z-index: 2;
+    display: block;
+    margin: auto;
+}
+.header-content h1{
+    font-size: 70px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.header-content p{
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 2rem;
+}
+.btn{
+    background: #34b3a0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.9rem 1.5rem;
+    text-decoration: none;
+    border-radius: 7px;
+}
+.pimg2, .pimg3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.pimg2{
+    background-image: url("../img/google-doc-hacking-800x450.jpg");
+    min-height: 300px;
+    background-attachment: fixed;
+}
+.pimg2 .ptext{
+    font-weight: bold;
+}
+.pimg3{
+    background-image: url("../img/wallpaper_quote.jpeg");
+    min-height: 300px;
+    background-attachment: fixed;
+    quotes: "„" "“";
+}
+.pimg3 .ptext{
+    padding-left: 180px;
+    padding-right: 180px;
+    font-weight: bold;
+}
+.section-quote-overlay, .section-facts-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.45;
+}
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-light{
+    background-color: #f4f4f4;
+    color:#666;
+}
+.section-dark{
+    background-color: #282e34;
+    color:#ddd;
+}
+.ptext{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    margin-top: -50px;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+.ptext .border{
+    color: #fff;
+    padding: 20px;
+}
+.ptext .border.trans{
+    background-color: transparent;
+    clear: both;
+    vertical-align: middle;
+}
+.type{
+    height: 150px;
+    margin: 0;
+}
+@media(max-width:560px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
+@media(max-width:960px){
+    .container{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/*-------------------------------------------------------- About me --------------------------------------------------------*/
+.about-me span{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.about-me hr, .skills hr, .projects hr, .contact hr{
+    width: 30%;
+}
+
+.about-me-content{
+    display: flex;
+}
+
+.about-me-content div{
+    flex: 2;
+    text-align: justify;
+    padding: 50px;
+    width: auto;
+    overflow: hidden;
+    font-weight:bold;
+    font-size: 17px;
+}
+@media(max-width:768px){
+    .about-me-content{
+        display: block;
+    }
+}
+/*-------------------------------------------------------- Projects --------------------------------------------------------*/
+.skills, .projects, .contact{
+    font-size: 40px;
+    font-weight: bolder;
+}
+.project-content-section{
+    background-color: #fff;    
+}
+.projects-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 35px;
+}
+.projects-content img{
+    max-height: 220px;
+    width: 100%;
+}
+.projects-content .text{
+    font-size: 15px;
+    padding: 25px;
+    padding-top: 0;
+    text-align: justify;
+    font-weight: 500;
+    color: #000;
+}
+.projects-content .text a{
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: underline;
+}
+.projects-content .text h5{
+    font-size:20px;
+    text-align: left;
+    font-weight: bolder;
+    text-align: center;
+}
+.projects-content .text a{
+    text-decoration: none;
+}
+@media(max-width:700px){
+    .projects-content{
+        display: block;
+    }
+    .project-content-section {
+        margin: 20px;
+    }
+}
+/*-------------------------------------------------------- Skills --------------------------------------------------------*/
+.skill-content{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 100px;
+}
+
+@media(max-width:700px){
+    .skill-content{
+        display: block;
+    }
+    .skill-content-one div{
+        margin: 20px;
+    }
+}
+.skill-content-one div{
+    padding: 30px;
+    background: #fff;
+    border-radius: 2px;    
+}
+.skill-content-one div:hover{
+    box-shadow: 1px 1px 10px  #282e34;
+}
+.skill-content-one div span{
+    font-size: 25px;
+    font-weight: bold;
+}
+@media(max-width:768px){
+    .skill-content-one{
+        float: none;
+    }
+}
+
+/* -------------------------------------------------------- Contact -------------------------------------------------------- */
+.company-info{
+    font-size: 15px;
+    text-align: left;
+    line-height: 2.5em;
+}
+.company-info li {
+    list-style-type: none;
+}
+
+.contact-form form{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
+
+.contact-form form p {
+    margin: 0;
+}
+
+.contact-form form .full{
+    grid-column: 1/3;
+}
+
+.button, .contact-form form input, .contact-form form textarea{
+    width: 100%;
+    padding: 0.9em;
+}
+
+.company-info ul{
+    margin: 0 1em 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 25px;
+}
+
+.button{
+    text-transform: uppercase;
+    border: none;
+}
+@media(min-width:700px){
+    .contact-content{
+        display: grid;
+        grid-template-columns:  1fr 1.7fr;
+    }
+    .contact-content form input,.contact-content form textarea{
+        border: none;
+    }
+    .contact-content > *{
+        padding: 2em;
+    }
+}
+/* -------------------------------------------------------- Footer -------------------------------------------------------- */
+footer {
+    background-color: #212121;
+    padding: 12px;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0;
+}
