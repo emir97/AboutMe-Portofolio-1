@@ -69,6 +69,11 @@ nav ul li a {
 nav ul li a:focus{
     outline: none;
 }
+@media(max-width:750px){
+    nav ul{
+        display: none;
+    }
+}
 /*-------------------------------------------------------- Home --------------------------------------------------------*/
 .header{
     height: 100vh;
@@ -156,6 +161,14 @@ nav ul li a:focus{
     padding-right: 180px;
     font-weight: bold;
 }
+@media(max-width:750px){
+    .pimg2 .ptext, .pimg3 .ptext{
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
 .section-quote-overlay, .section-facts-overlay{
     position: absolute;
     height: 100%;
@@ -199,11 +212,6 @@ nav ul li a:focus{
     height: 150px;
     margin: 0;
 }
-@media(max-width:560px){
-    .pimg1, .pimg2, .pimg3{
-        background-attachment: scroll;
-    }
-}
 @media(max-width:960px){
     .container{
         padding-left: 3rem;
@@ -237,6 +245,9 @@ nav ul li a:focus{
 @media(max-width:768px){
     .about-me-content{
         display: block;
+    }
+    .about-me-content div{
+        padding: 25px 0;
     }
 }
 /*-------------------------------------------------------- Projects --------------------------------------------------------*/
@@ -280,9 +291,10 @@ nav ul li a:focus{
 .projects-content .text a{
     text-decoration: none;
 }
-@media(max-width:700px){
+@media(max-width:750px){
     .projects-content{
         display: block;
+        padding: 0;
     }
     .project-content-section {
         margin: 20px;
@@ -294,15 +306,6 @@ nav ul li a:focus{
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 0 100px;
-}
-
-@media(max-width:700px){
-    .skill-content{
-        display: block;
-    }
-    .skill-content-one div{
-        margin: 20px;
-    }
 }
 .skill-content-one div{
     padding: 30px;
@@ -322,6 +325,16 @@ nav ul li a:focus{
     }
 }
 
+@media(max-width:750px){
+    .skill-content{
+        display: block;
+        padding: 30px 10px;
+    }
+    .skill-content-one div{
+        margin: 20px;
+        padding: 0;
+    }
+}
 /* -------------------------------------------------------- Contact -------------------------------------------------------- */
 .company-info{
     font-size: 15px;
